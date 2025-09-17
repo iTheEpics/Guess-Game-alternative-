@@ -16,9 +16,19 @@ int main(){
     {
         if (attempts < maxAttempts)
         {
+            
             printf("Please guess a number: ");
             scanf("%d", &guess);
             attempts++;
+            if (guess < secNumber)
+            {
+                printf("Secret number is bigger than your guess.\n");
+            }
+            else if (guess > secNumber)
+            {
+                printf("Secret number is smaller than your guess.\n");
+            }
+            
         }
         else {
             outOfGuesses = 1;
